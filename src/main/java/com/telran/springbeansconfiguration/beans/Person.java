@@ -1,5 +1,7 @@
 package com.telran.springbeansconfiguration.beans;
 
+import org.springframework.stereotype.Component;
+
 public class Person {
 
     private String name;

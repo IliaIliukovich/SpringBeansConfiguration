@@ -1,10 +1,26 @@
 package com.telran.springbeansconfiguration.beans;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("germany")
 public class Country {
 
+    @Value("${country.name}")
     private String name;
 
+    @Value("${country.code}")
     private String code;
+
+    public Country() {
+//        this.name = "Germany";
+//        this.code = "GE";
+    }
+
+    public Country(String name, String code) {
+        this.name = name;
+        this.code = code;
+    }
 
     public String getName() {
         return name;
