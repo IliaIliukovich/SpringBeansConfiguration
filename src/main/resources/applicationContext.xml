@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.telran.springbeansconfiguration.beans.HelloWorld" id="helloWorld" scope="prototype"/>
+
+    <bean class="com.telran.springbeansconfiguration.beans.Country" id="germany">
+        <property name="name" value="Germany"/>
+        <property name="code" value="GE"/>
+    </bean>
+    <bean class="com.telran.springbeansconfiguration.beans.Country" id="france">
+        <property name="name" value="France"/>
+        <property name="code" value="FR"/>
+    </bean>
+    <bean class="com.telran.springbeansconfiguration.beans.Person" id="person1">
+        <property name="name" value="Tom"/>
+        <property name="age" value="25"/>
+        <property name="country" ref="germany"/>
+    </bean>
+    <bean class="com.telran.springbeansconfiguration.beans.Person" id="person2">
+        <property name="name" value="Bob"/>
+        <property name="age" value="33"/>
+        <property name="country" ref="france"/>
+    </bean>
+
+</beans>
