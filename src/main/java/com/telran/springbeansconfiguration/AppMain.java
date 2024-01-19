@@ -39,6 +39,9 @@ public class AppMain {
         System.out.println(personTwo);
         System.out.println(personOne.getCountry() == personTwo.getCountry());
 
+        UseBeans useBeans = context.getBean("useBeans", UseBeans.class);
+        useBeans.doSomething();
+
         // Usual Java logic without spring context
 //        AppConfig config = new AppConfig();
 //        Person person1 = config.person1();
